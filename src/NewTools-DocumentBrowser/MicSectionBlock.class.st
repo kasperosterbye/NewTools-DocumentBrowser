@@ -121,14 +121,15 @@ MicSectionBlock >> initialize [
 ]
 
 { #category : 'displaying' }
-MicSectionBlock >> inspectionSection [
+MicSectionBlock >> inspectionSection: aBuilder [
 
 	<inspectorPresentationOrder: 830 title: 'Sections'>
-	^ SpTreePresenter new
-		  roots: { self };
-		  children: [ :aNode | aNode subsections children];
-		  display: [ :aNode | aNode displayString ];
-		  yourself
+	^ aBuilder newTree
+		addStyle: 'stList';
+		roots: { self };
+		children: [ :aNode | aNode subsections children];
+		display: [ :aNode | aNode displayString ];
+		yourself
 ]
 
 { #category : 'accessing' }

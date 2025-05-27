@@ -1,8 +1,8 @@
 Extension { #name : 'Text' }
 
 { #category : '*Microdown-RichTextPresenter' }
-Text >> inspectionRichText [
+Text >> inspectionRichText: aBuilder [
 	<inspectorPresentationOrder: -1 title: 'RichText'>
 
-	^ MicTextPresenter new text: self
+	^ (aBuilder initialize: MicTextPresenter) text: self
 ]
