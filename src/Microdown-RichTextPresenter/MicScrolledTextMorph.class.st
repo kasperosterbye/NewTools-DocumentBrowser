@@ -21,6 +21,7 @@ MicScrolledTextMorph >> font: aFont [
 
 { #category : 'event handling' }
 MicScrolledTextMorph >> textAreaExtentChanged [
+
 	super textAreaExtentChanged.
 	"When textArea size change, scalable images might need to be redrawn"
 	self model renderWidth: self width.

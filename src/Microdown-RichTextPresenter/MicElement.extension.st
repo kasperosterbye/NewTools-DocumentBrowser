@@ -1,8 +1,10 @@
 Extension { #name : 'MicElement' }
 
 { #category : '*Microdown-RichTextPresenter' }
-MicElement >> inspectionSectionRendered [
-
+MicElement >> inspectionSectionRendered: aBuilder [
 	<inspectorPresentationOrder: 950 title: 'Rendered'>
-	^ MicrodownPresenter new document: self;yourself
+
+	^ (aBuilder instantiate: MicrodownPresenter) 
+		document: self;
+		yourself 
 ]
