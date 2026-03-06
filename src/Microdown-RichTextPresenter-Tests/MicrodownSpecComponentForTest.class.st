@@ -24,6 +24,7 @@ MicrodownSpecComponentForTest class >> defaultLayout [
 { #category : 'specs' }
 MicrodownSpecComponentForTest class >> open [
 	<script>
+	<ignoreNotImplementedSelectors: #( openWithSpec )>
 	self new openWithSpec
 ]
 
